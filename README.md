@@ -1,6 +1,6 @@
 # Route Planning Project
 
-This route planning project computes the shortest path between two points in a map using A star search algorithm. Solely, built using C++, this project is implemented making use of Object Oriented Programming concepts in C++.
+This route planning project computes the shortest path between two points in a map using A* search algorithm. Solely, built using C++, this project is implemented making use of Object Oriented Programming concepts in C++.
 
 <img src="map.png" width="600" height="450" />
 
