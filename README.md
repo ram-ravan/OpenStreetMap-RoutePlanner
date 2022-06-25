@@ -1,18 +1,20 @@
 # Route Planning Project
 
-This repo contains the starter code for the Route Planning project.
+This route planning project computes the shortest path between two points in a map using A star search algorithm. Solely, built using C++, this project is implemented making use of Object Oriented Programming concepts in C++.
 
 <img src="map.png" width="600" height="450" />
 
 ## Cloning
 
-When cloning this project, be sure to use the `--recurse-submodules` flag. Using HTTPS:
+When cloning this project, be sure to use the `--recurse-submodules` flag. 
+
+Using HTTPS:
 ```
-git clone https://github.com/udacity/CppND-Route-Planning-Project.git --recurse-submodules
+git clone https://github.com/ram-ravan/RoutePlanner-OpenStreetMap.git --recurse-submodules
 ```
 or with SSH:
 ```
-git clone git@github.com:udacity/CppND-Route-Planning-Project.git --recurse-submodules
+git clone git@github.com:ram-ravan/RoutePlanner-OpenStreetMap.git --recurse-submodules
 ```
 
 ## Dependencies for Running Locally
@@ -61,8 +63,11 @@ The testing executable is also placed in the `build` directory. From within `bui
 ```
 
 ## Troubleshooting
-* Some students have reported issues in cmake to find io2d packages, make sure you have downloaded [this](https://github.com/cpp-io2d/P0267_RefImpl/blob/master/BUILDING.md#xcode-and-libc).
+
 * For MAC Users cmake issues: Comment these lines from CMakeLists.txt under P0267_RefImpl
+
+* Make sure you have downloaded [this](https://github.com/cpp-io2d/P0267_RefImpl/blob/master/BUILDING.md#xcode-and-libc).
+
     ```
     if( NOT DEFINED IO2D_WITHOUT_SAMPLES )
 	     add_subdirectory(P0267_RefImpl/Samples)
@@ -75,22 +80,36 @@ The testing executable is also placed in the `build` directory. From within `bui
     brew install pkg-config
     ```
  * For Ubuntu Linux IO2D installation errors, follow the given steps:
-   ```
-	sudo apt update
-	sudo apt install build-essential
-	sudo apt install cmake
-	sudo apt install libcairo2-dev
-	sudo apt install libgraphicsmagick1-dev
-	sudo apt install libpng-dev
 
-	git clone --recurse-submodules https://github.com/cpp-io2d/P0267_RefImpl
-	cd P0267_RefImpl
-	mkdir Debug
-	cd Debug
-	cmake --config Debug "-DCMAKE_BUILD_TYPE=Debug" ..
-	cmake --build .
-	sudo make install
-   ```
+```
+sudo apt update -y
+sudo apt install build-essential -y 
+sudo apt install cmake -y 
+sudo apt install libcairo2-dev -y 
+sudo apt install libgraphicsmagick1-dev -y 
+sudo apt install libpng-dev -y
+  
+cd ~/Downloads 
+git clone --recurse-submodules https://github.com/cpp-io2d/P0267_RefImpl
+cd P0267_RefImpl
+mkdir Debug
+```
+
+Then, _gedit CMakeLists.txt_ and comment the following lines using #
+
+```
+if( NOT DEFINED IO2D_WITHOUT_SAMPLES )
+ add_subdirectory(P0267_RefImpl/Samples)
+endif()
+```
+
+After commenting, go ahead with the following steps.
+
+``` cd Debug
+cmake config "-DCMAKE_BUILD_TYPE=Debug" ..
+cmake build .
+sudo make install 
+```
      
  * If you are working on windows and unable to install IO2D:
       * Enable WSL (Windows Subsystem for Linux) and use a distribution like [Ubuntu](https://ubuntu.com/wsl).(available from the windows store): 
