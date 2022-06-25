@@ -20,7 +20,7 @@ class RouteModel : public Model {
 
         void FindNeighbors();
         float distance(Node other) const {
-            return std::sqrt(std::pow((x - other.x), 2) + std::pow((y - other.y), 2));
+            return std::sqrt(std::pow((x - other.x), static_cast<float>(2)) + std::pow((y - other.y), static_cast<float>(2)));
         }
 
         Node(){}
@@ -28,8 +28,8 @@ class RouteModel : public Model {
 
       private:
         int index;
-        Node * FindNeighbor(std::vector<int> node_indices);
-        RouteModel * parent_model = nullptr;
+        Node *FindNeighbor(std::vector<int> node_indices);
+        RouteModel *parent_model = nullptr;
     };
 
     RouteModel(const std::vector<std::byte> &xml);
