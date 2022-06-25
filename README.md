@@ -2,7 +2,9 @@
 
 This route planning project computes the shortest path between two points in a map using A* search algorithm. Solely, built using C++, this project is implemented making use of Object Oriented Programming concepts in C++.
 
-<img src="map.png" width="600" height="450" />
+<!-- <img src="OpenStreetMap.png" width="600" height="450" /> -->
+
+<img src="OpenStreetMap.png"/>
 
 ## Cloning
 
@@ -79,6 +81,7 @@ The testing executable is also placed in the `build` directory. From within `bui
     ```
     brew install pkg-config
     ```
+
  * For Ubuntu Linux IO2D installation errors, follow the given steps:
 
 ```
