@@ -1,6 +1,6 @@
 # Route Planning Project
 
-This route planning project computes the shortest path between two points in a map using A* search algorithm. Solely, built using C++, this project is implemented making use of Object Oriented Programming concepts in C++. The starter code for this project is provided by Udacity as a part of C++ nanodegree program.
+This route planning project computes the shortest path between two points in a map using A* search algorithm. Solely, built using C++, this project is implemented making use of Object Oriented Programming concepts in C++. The [starter code](https://github.com/udacity/CppND-Route-Planning-Project) for this project is provided by Udacity as a part of C++ nanodegree program.
 
 <!-- <img src="OpenStreetMap.png" width="600" height="450" /> -->
 
